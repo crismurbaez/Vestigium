@@ -1,0 +1,10 @@
+{
+    "editor.lightbulb.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "dart.enableSdkFormatter": true,
+    "dart.analysisExcludedFolders": [],
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true
+  }
