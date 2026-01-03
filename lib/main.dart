@@ -21,9 +21,18 @@ Widget materialApp() {
     debugShowCheckedModeBanner: false,
     title: 'Vestigium',
     theme: ThemeData(
-      colorSchemeSeed: Colors.blue,
       useMaterial3: true,
-      scaffoldBackgroundColor: Colors.grey[400],
+      //Paleta de colores global
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: Color(0xFF1B5E20), // Color base
+        brightness: Brightness.dark, // Dark mode por defecto
+        surface: Color(0xFF0D1B2A), // Fondo de pantallas
+        onSurface: Colors.white, // Texto sobre el fondo
+        primary: Color(0xFF1B5E20), // Color primario para elementos principales
+        secondary: Color(0xFF4CAF50), // Color secundario para resaltar precisión
+        )
+      
+      
     ),
     home: const HomePage(),
   );
