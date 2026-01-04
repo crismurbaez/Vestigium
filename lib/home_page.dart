@@ -20,7 +20,10 @@ class HomePage extends StatefulWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('GPS'),
-              ElevatedButton(onPressed: (){print('GPS');}, child: const Icon(Icons.location_on)),
+              FloatingActionButton(
+                onPressed: (){print('GPS');}, 
+                child: const Icon(Icons.location_on
+                )),
         ],),
         ),);
     }
