@@ -20,7 +20,13 @@ Widget materialApp() {
   return MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'Vestigium',
-    theme: ThemeData(
+    theme: themeDataFromSeed(),
+    home: const HomePage(),
+  );
+}
+
+  ThemeData themeDataFromSeed() {
+    return ThemeData(
       useMaterial3: true,
       //Paleta de colores global
       colorScheme: ColorScheme.fromSeed(
@@ -30,10 +36,17 @@ Widget materialApp() {
         onSurface: Colors.white, // Texto sobre el fondo
         primary: Color(0xFF1B5E20), // Color primario para elementos principales
         secondary: Color(0xFF4CAF50), // Color secundario para resaltar precisión
-        )
-      
-      
-    ),
-    home: const HomePage(),
-  );
-}
+        ),
+      //Personalización global de componentes
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Color(0xFF0D1B2A), // Fondo de la barra de navegación
+        foregroundColor: Colors.white, // Texto de la barra de navegación
+        elevation:0, // Sin sombra
+        ),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: Color(0xFF1B5E20), // Color de fondo del botón flotante
+        foregroundColor: Colors.white, // Texto del botón flotante
+      ),
+    );
+  }
+
